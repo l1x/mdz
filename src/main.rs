@@ -42,8 +42,8 @@ fn create_clap_command() -> Command {
             "For more information about a specific subcommand, run `mdz <command> --help`\n\
              The source code for mdz is available at: https://github.com/l1x/mdz",
         )
-        .subcommand(cmd::build::make_subcommand())
-        .subcommand(cmd::clean::make_subcommand());
+        .subcommand(cmd::build::make_subcommand());
+    //.subcommand(cmd::clean::make_subcommand());
 
     app
 }

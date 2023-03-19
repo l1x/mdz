@@ -1,12 +1,4 @@
-use std::fs::DirEntry;
 use walkdir::WalkDir;
-
-pub(crate) fn is_file(x: &DirEntry) -> bool {
-    match x.file_type() {
-        Ok(v) => v.is_file(),
-        Err(_e) => false,
-    }
-}
 
 pub fn get_md_files(path: Option<&str>) -> Option<Vec<walkdir::DirEntry>> {
     match path {

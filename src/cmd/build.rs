@@ -1,11 +1,7 @@
+use crate::common::file::get_md_files;
 use clap::{ArgMatches, Command};
-use std::{
-    env, error,
-    fs::{self},
-    path::{Path, PathBuf},
-};
-
-use crate::common::file::{get_md_files, is_file};
+use std::path::Path;
+use std::{env, error};
 
 // Create clap subcommand arguments
 pub fn make_subcommand() -> Command {
