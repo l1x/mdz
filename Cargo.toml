@@ -8,6 +8,7 @@ chrono = {version = "0.4.24", default-features = false, features = ["clock"]}
 clap = {version = "4.1.10", features = ["cargo", "wrap_help"]}
 env_logger = "0.10.0"
 log = "0.4.17"
+walkdir = "2.3.3"
 # Build feature
 markdown = "1.0.0-alpha.7"
 serde = {version = "1.0.157", features = ["derive"], optional = true}

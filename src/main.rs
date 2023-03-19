@@ -11,6 +11,7 @@ use std::env;
 use std::io::Write;
 
 mod cmd;
+pub mod common;
 
 const VERSION: &str = concat!("v", crate_version!());
 
@@ -19,7 +20,7 @@ fn main() {
     let command = create_clap_command();
     let res = match command.get_matches().subcommand() {
         Some(("build", sub_matches)) => cmd::build::execute(sub_matches),
-        Some(("clean", sub_matches)) => cmd::clean::execute(sub_matches),
+        //Some(("clean", sub_matches)) => cmd::clean::execute(sub_matches),
         _ => unreachable!(),
     };
 
